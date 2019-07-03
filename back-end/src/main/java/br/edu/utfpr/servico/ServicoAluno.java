@@ -38,7 +38,7 @@ public class ServicoAluno {
     }
 
     @GetMapping ("/servico/aluno/{id}")
-    public ResponseEntity<AlunoDTO> listarPorId(@PathVariable int ra) {
+    public ResponseEntity<AlunoDTO> listarPorRa(@PathVariable int ra) {
         Optional<AlunoDTO> alunoEncontrado = alunos.stream().filter(a -> a.getRa() == ra).findAny();
 
         return ResponseEntity.of(alunoEncontrado);

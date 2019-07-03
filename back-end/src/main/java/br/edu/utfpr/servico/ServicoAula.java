@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.utfpr.dto.AulaDTO;
 import io.micrometer.core.ipc.http.HttpSender.Response;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,26 +26,26 @@ public class ServicoAula {
     
     private List<AulaDTO> aulas;
     
-    public ServicoAula(){
+    public ServicoAula() throws ParseException{
         aulas = Stream.of(
             AulaDTO.builder()
                     .id(1)
-                    .conteudo("POO")
-                    .data(2019/06/02)
+                    .conteudo("Caso de Uso")
+                    .data(new SimpleDateFormat( "yyyyMMdd" ).parse( "20180910" ))
                     .observacao("observacao 1")
                     .substituicao(false)
                     .build(),
             AulaDTO.builder().
-                    id(1)
-                    .conteudo("Desktop")
-                    .data(2019/06/02)
+                    id(2)
+                    .conteudo("JAVA")
+                    .data(new SimpleDateFormat( "yyyyMMdd" ).parse( "20190603" ))
                     .observacao("observacao 2")
                     .substituicao(true)
                     .build(),
             AulaDTO.builder()
-                    .id(1)
-                    .conteudo("Arquitetura")
-                    .data(2019/06/02)
+                    .id(3)
+                    .conteudo("Lombok")
+                    .data(new SimpleDateFormat( "yyyyMMdd" ).parse( "20190520" ))
                     .observacao("observacao 3")
                     .substituicao(false).build()
         ).collect(Collectors.toList());

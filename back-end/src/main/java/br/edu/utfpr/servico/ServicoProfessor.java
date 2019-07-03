@@ -28,7 +28,13 @@ public class ServicoProfessor {
         professores = Stream.of(
             ProfessorDTO.builder().ra(1111).nome("Gabriel").build(),
             ProfessorDTO.builder().ra(2222).nome("Fabricio").build(),
-            ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build()
+            ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build(),
+            ProfessorDTO.builder().ra(4444).nome("Lucas").build(),
+            ProfessorDTO.builder().ra(5555).nome("Cleiton").build(),
+            ProfessorDTO.builder().ra(6666).nome("Giovani").build(),
+            ProfessorDTO.builder().ra(7777).nome("William").build(),
+            ProfessorDTO.builder().ra(8888).nome("Silvio").build(),
+            ProfessorDTO.builder().ra(9999).nome("Cleber").build()
         ).collect(Collectors.toList());
     }
     
@@ -38,7 +44,7 @@ public class ServicoProfessor {
     }
 
     @GetMapping ("/servico/professor/{id}")
-    public ResponseEntity<ProfessorDTO> listarPorId(@PathVariable int ra) {
+    public ResponseEntity<ProfessorDTO> listarPorRa(@PathVariable int ra) {
         Optional<ProfessorDTO> professorEncontrado = professores.stream().filter(p -> p.getRa() == ra).findAny();
 
         return ResponseEntity.of(professorEncontrado);
