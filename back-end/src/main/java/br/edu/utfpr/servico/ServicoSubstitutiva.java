@@ -39,8 +39,8 @@ public class ServicoSubstitutiva {
                             .observacao("observacao 2")
                             .substituicao(true)
                             .build())
-                    .profOriginal(ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build())
-                    .profSubstituto(ProfessorDTO.builder().ra(9999).nome("Cleber").build())
+                    .profOriginal(ProfessorDTO.builder().ra(3).nome("Jose Antonio").build())
+                    .profSubstituto(ProfessorDTO.builder().ra(9).nome("Cleber").build())
             .build()
         ).collect(Collectors.toList());
     }

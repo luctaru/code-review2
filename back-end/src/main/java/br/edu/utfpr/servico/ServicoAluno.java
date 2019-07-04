@@ -26,9 +26,9 @@ public class ServicoAluno {
     
     public ServicoAluno(){
         alunos = Stream.of(
-            AlunoDTO.builder().ra(1829793).nome("Lucas").build(),
-            AlunoDTO.builder().ra(1829742).nome("Felipe").build(),
-            AlunoDTO.builder().ra(1829769).nome("Isabelle").build()
+            AlunoDTO.builder().ra(1).nome("Lucas").build(),
+            AlunoDTO.builder().ra(2).nome("Felipe").build(),
+            AlunoDTO.builder().ra(3).nome("Isabelle").build()
         ).collect(Collectors.toList());
     }
     
@@ -37,7 +37,7 @@ public class ServicoAluno {
         return ResponseEntity.ok(alunos);
     }
 
-    @GetMapping ("/servico/aluno/{id}")
+    @GetMapping ("/servico/aluno/{ra}")
     public ResponseEntity<AlunoDTO> listarPorRa(@PathVariable int ra) {
         Optional<AlunoDTO> alunoEncontrado = alunos.stream().filter(a -> a.getRa() == ra).findAny();
 
@@ -53,7 +53,7 @@ public class ServicoAluno {
         return ResponseEntity.status(201).body(aluno);
     }
 
-    @DeleteMapping ("/servico/aluno/{id}")
+    @DeleteMapping ("/servico/aluno/{ra}")
     public ResponseEntity excluir (@PathVariable int ra) {
         
         if (alunos.removeIf(aluno -> aluno.getRa() == ra))
@@ -63,7 +63,7 @@ public class ServicoAluno {
             return ResponseEntity.notFound().build();
     }
 
-    @PutMapping ("/servico/aluno/{id}")
+    @PutMapping ("/servico/aluno/{ra}")
     public ResponseEntity<AlunoDTO> alterar (@PathVariable int ra, @RequestBody AlunoDTO aluno) {
         Optional<AlunoDTO> alunoExistente = alunos.stream().filter(a -> a.getRa() == ra).findAny();
 

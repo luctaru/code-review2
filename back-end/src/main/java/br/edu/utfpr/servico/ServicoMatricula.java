@@ -33,7 +33,7 @@ public class ServicoMatricula {
                     .id(1)
                     .aluno(AlunoDTO
                             .builder()
-                            .ra(1829793)
+                            .ra(1)
                             .nome("Lucas")
                     .build())
                     .disciplina(DisciplinaDTO
@@ -43,7 +43,7 @@ public class ServicoMatricula {
                             .qtdAula(2)
                             .professor(ProfessorDTO
                                     .builder()
-                                    .ra(3333)
+                                    .ra(3)
                                     .nome("Jose Antonio")
                             .build())
                     .build())
@@ -52,7 +52,7 @@ public class ServicoMatricula {
                     .id(2)
                     .aluno(AlunoDTO
                             .builder()
-                            .ra(1829769)
+                            .ra(3)
                             .nome("Isabelle")
                     .build())
                     .disciplina(DisciplinaDTO
@@ -62,7 +62,7 @@ public class ServicoMatricula {
                             .qtdAula(2)
                             .professor(ProfessorDTO
                                     .builder()
-                                    .ra(3333)
+                                    .ra(3)
                                     .nome("Jose Antonio")
                             .build())
                     .build())
@@ -71,7 +71,7 @@ public class ServicoMatricula {
                     .id(3)
                     .aluno(AlunoDTO
                             .builder()
-                            .ra(1829742)
+                            .ra(2)
                             .nome("Felipe")
                     .build())
                     .disciplina(DisciplinaDTO
@@ -81,7 +81,7 @@ public class ServicoMatricula {
                             .qtdAula(4)
                             .professor(ProfessorDTO
                                     .builder()
-                                    .ra(2222)
+                                    .ra(2)
                                     .nome("Fabricio")
                             .build())
                     .build())

@@ -28,12 +28,12 @@ public class ServicoDepartamento {
     public ServicoDepartamento(){
         departamentos = Stream.of(
             DepartamentoDTO.builder().id(1).nome("DACOM")
-                    .chefe(ProfessorDTO.builder().ra(1111).nome("Gabriel").build())
+                    .chefe(ProfessorDTO.builder().ra(1).nome("Gabriel").build())
             .build(),
             DepartamentoDTO.builder().id(2).nome("DAELT")
-                    .chefe(ProfessorDTO.builder().ra(2222).nome("Fabricio").build())
+                    .chefe(ProfessorDTO.builder().ra(2).nome("Fabricio").build())
             .build(),DepartamentoDTO.builder().id(3).nome("DAMEC")
-                    .chefe(ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build())
+                    .chefe(ProfessorDTO.builder().ra(3).nome("Jose Antonio").build())
             .build()
         ).collect(Collectors.toList());
     }

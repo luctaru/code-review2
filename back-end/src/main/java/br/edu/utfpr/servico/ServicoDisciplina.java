@@ -28,13 +28,13 @@ public class ServicoDisciplina {
     public ServicoDisciplina(){
         disciplinas = Stream.of(
             DisciplinaDTO.builder().id(1).nome("APOO").qtdAula(2)
-                    .professor(ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build())
+                    .professor(ProfessorDTO.builder().ra(3).nome("Jose Antonio").build())
             .build(),
             DisciplinaDTO.builder().id(2).nome("Desktop").qtdAula(4)
-                    .professor(ProfessorDTO.builder().ra(2222).nome("Fabricio").build())
+                    .professor(ProfessorDTO.builder().ra(2).nome("Fabricio").build())
             .build(),
             DisciplinaDTO.builder().id(3).nome("Arquitetura").qtdAula(4)
-                    .professor(ProfessorDTO.builder().ra(1111).nome("Gabriel").build())
+                    .professor(ProfessorDTO.builder().ra(1).nome("Gabriel").build())
             .build()
         ).collect(Collectors.toList());
     }

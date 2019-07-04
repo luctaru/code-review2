@@ -26,15 +26,15 @@ public class ServicoProfessor {
     
     public ServicoProfessor(){
         professores = Stream.of(
-            ProfessorDTO.builder().ra(1111).nome("Gabriel").build(),
-            ProfessorDTO.builder().ra(2222).nome("Fabricio").build(),
-            ProfessorDTO.builder().ra(3333).nome("Jose Antonio").build(),
-            ProfessorDTO.builder().ra(4444).nome("Lucas").build(),
-            ProfessorDTO.builder().ra(5555).nome("Cleiton").build(),
-            ProfessorDTO.builder().ra(6666).nome("Giovani").build(),
-            ProfessorDTO.builder().ra(7777).nome("William").build(),
-            ProfessorDTO.builder().ra(8888).nome("Silvio").build(),
-            ProfessorDTO.builder().ra(9999).nome("Cleber").build()
+            ProfessorDTO.builder().ra(1).nome("Gabriel").build(),
+            ProfessorDTO.builder().ra(2).nome("Fabricio").build(),
+            ProfessorDTO.builder().ra(3).nome("Jose Antonio").build(),
+            ProfessorDTO.builder().ra(4).nome("Lucas").build(),
+            ProfessorDTO.builder().ra(5).nome("Cleiton").build(),
+            ProfessorDTO.builder().ra(6).nome("Giovani").build(),
+            ProfessorDTO.builder().ra(7).nome("William").build(),
+            ProfessorDTO.builder().ra(8).nome("Silvio").build(),
+            ProfessorDTO.builder().ra(9).nome("Cleber").build()
         ).collect(Collectors.toList());
     }
     
@@ -43,7 +43,7 @@ public class ServicoProfessor {
         return ResponseEntity.ok(professores);
     }
 
-    @GetMapping ("/servico/professor/{id}")
+    @GetMapping ("/servico/professor/{ra}")
     public ResponseEntity<ProfessorDTO> listarPorRa(@PathVariable int ra) {
         Optional<ProfessorDTO> professorEncontrado = professores.stream().filter(p -> p.getRa() == ra).findAny();
 
@@ -59,7 +59,7 @@ public class ServicoProfessor {
         return ResponseEntity.status(201).body(professor);
     }
 
-    @DeleteMapping ("/servico/professor/{id}")
+    @DeleteMapping ("/servico/professor/{ra}")
     public ResponseEntity excluir (@PathVariable int ra) {
         
         if (professores.removeIf(professor -> professor.getRa() == ra))
@@ -69,7 +69,7 @@ public class ServicoProfessor {
             return ResponseEntity.notFound().build();
     }
 
-    @PutMapping ("/servico/professor/{id}")
+    @PutMapping ("/servico/professor/{ra}")
     public ResponseEntity<ProfessorDTO> alterar (@PathVariable int ra, @RequestBody ProfessorDTO professor) {
         Optional<ProfessorDTO> professorExistente = professores.stream().filter(p -> p.getRa() == ra).findAny();
 

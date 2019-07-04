@@ -35,13 +35,13 @@ public class ServicoCurso {
                             .nome("DACOM")
                             .chefe(ProfessorDTO
                                     .builder()
-                                    .ra(4444)
+                                    .ra(4)
                                     .nome("Lucas")
                                     .build())
                             .build())
                     .coordenador(ProfessorDTO
                             .builder()
-                            .ra(1111)
+                            .ra(1)
                             .nome("Gabriel")
                             .build())
             .build(),
@@ -52,13 +52,13 @@ public class ServicoCurso {
                             .nome("DAELT")
                             .chefe(ProfessorDTO
                                     .builder()
-                                    .ra(5555)
+                                    .ra(5)
                                     .nome("Cleiton")
                                     .build())
                             .build())
                     .coordenador(ProfessorDTO
                             .builder()
-                            .ra(2222)
+                            .ra(2)
                             .nome("Fabricio")
                             .build())
             .build(),
@@ -69,13 +69,13 @@ public class ServicoCurso {
                             .nome("DAMEC")
                             .chefe(ProfessorDTO
                                     .builder()
-                                    .ra(6666)
+                                    .ra(6)
                                     .nome("Giovani")
                                     .build())
                             .build())
                     .coordenador(ProfessorDTO
                             .builder()
-                            .ra(3333)
+                            .ra(3)
                             .nome("Jose Antonio")
                             .build())
             .build()
