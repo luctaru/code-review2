@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gerencia Pais</title>
+    <title>Gerencia Professor</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -22,26 +22,18 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Gerenciamento de País</h1>
-            <p>Essa página é responsável por fazer o geranciamento de paises. </p>
+            <h1>Gerenciamento de Professor</h1>
+            <p>Essa página é responsável por fazer o geranciamento de professores. </p>
         </div>
         <div class="row">
             <div class="col">
-                <form action="/pais/alterar" method="post">
+                <form action="/professor/alterar" method="post">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
-                        <input value="${(paisAtual.nome)!}" name="nome" type="text" class="form-control" id="nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="sigla">Sigla:</label>
-                        <input value="${(paisAtual.sigla)!}"  name="sigla" type="text" class="form-control" id="sigla">
-                    </div>
-                    <div class="form-group">
-                        <label for="codigo">Código Telefone:</label>
-                        <input value="${(paisAtual.codigoTelefone)!}"  name="codigoTelefone" type="number" class="form-control" id="codigo">
+                        <input value="${(professorAtual.nome)!}" name="nome" type="text" class="form-control" id="nome">
                     </div>
 
-                    <input type="hidden" name="id" value="${(paisAtual.id)!}"></input>
+                    <input type="hidden" name="ra" value="${(professorAtual.ra)!}"></input>
 
                     <button type="submit" class="btn btn-warning">Alterar</button>
                 </form>
@@ -54,20 +46,15 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>Nome</th>
-                            <th>Sigla</th>
-                            <th>Código Telefone</th>
-                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <#list paises as pais>
+                        <#list professores as professor>
                             <tr>
-                                <td>${pais.nome}</td>
-                                <td>${pais.sigla}</td>
-                                <td>${pais.codigoTelefone}</td>
+                                <td>${professor.nome}</td>
                                 <td>
-                                    <a href="/pais/prepara-alterar?id=${pais.id}">Alterar</a>
-                                    <a href="/pais/excluir?id=${pais.id}">Excluir</a>
+                                    <a href="/professor/prepara-alterar?ra=${professor.ra}">Alterar</a>
+                                    <a href="/professor/excluir?ra=${professor.ra}">Excluir</a>
                                 </td>
                             </tr>        
                         </#list>
