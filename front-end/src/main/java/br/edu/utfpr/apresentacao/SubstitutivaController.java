@@ -34,7 +34,7 @@ public class SubstitutivaController {
 
     @PostMapping ("/substitutiva/criar")
     public String criar(SubstitutivaModel substitutiva) throws UnirestException {
-
+            System.out.println(substitutiva);
             Unirest.post("http://localhost:8081/servico/substitutiva")
                 .header("Content-type", "application/json")
                 .header("accept", "application/json")

@@ -1,5 +1,4 @@
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\dto\AulaDTO.java
-C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\excecao\NomeClienteJaExisteException.java
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\servico\ServicoAula.java
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\ProjectExampleApplication.java
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\dto\DisciplinaDTO.java
@@ -16,4 +15,3 @@ C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\dto\MatriculaDTO.java
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\servico\ServicoAluno.java
 C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\servico\ServicoDepartamento.java
-C:\Users\lucta\OneDrive\Documentos\7periodo\code-review2\back-end\src\main\java\br\edu\utfpr\excecao\NomeClienteMenor5CaracteresException.java

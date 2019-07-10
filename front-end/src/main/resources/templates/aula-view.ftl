@@ -72,8 +72,6 @@
                                 <td>${aula.observacao}</td>
                                 <td>${aula.substituicao?string('yes', 'no')}</td>
                                 <td>
-                                    <a href="/aula/prepara-alterar?id=${aula.id}">Alterar </a>
-                                    <a href="/aula/excluir?id=${aula.id}">Excluir </a>
                                     <a href="/aula/prepara-substituir?id=${aula.id}">Substituir </a>
                                 </td>
                             </tr>        

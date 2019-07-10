@@ -18,10 +18,8 @@ br\edu\utfpr\servico\ServicoMatricula.class
 br\edu\utfpr\dto\MatriculaDTO.class
 br\edu\utfpr\servico\ServicoDepartamento.class
 br\edu\utfpr\servico\ServicoDisciplina.class
-br\edu\utfpr\excecao\NomeClienteJaExisteException.class
 br\edu\utfpr\dto\ProfessorDTO$ProfessorDTOBuilder.class
 br\edu\utfpr\dto\DepartamentoDTO$DepartamentoDTOBuilder.class
-br\edu\utfpr\excecao\NomeClienteMenor5CaracteresException.class
 br\edu\utfpr\servico\ServicoAluno.class
 br\edu\utfpr\dto\AulaDTO$AulaDTOBuilder.class
 br\edu\utfpr\dto\MatriculaDTO$MatriculaDTOBuilder.class
